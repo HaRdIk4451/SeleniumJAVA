@@ -13,17 +13,17 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 	
 	WebDriver driver;
-	private String secretFilePath = "./src/main/java/configs/secrets.properties";
+	private String secretFilePath = "./src/main/java/config/secrets.properties";
 	Properties prop;
 	FileInputStream credentials;
 	
-	@FindBy(xpath="//input[@class='form-control string email optional']")
+	@FindBy(xpath="//input[@type='text']")
 	WebElement email;
 	
-	@FindBy(xpath="//input[@class='form-control password optional password-input']")
+	@FindBy(xpath="//input[@type='password']")
 	WebElement password;
 	
-	@FindBy(xpath="//input[@name='commit']")
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement submitBtn;
 	
  
@@ -50,7 +50,7 @@ public class LoginPage {
 	public String correctGetEmail() {
 		
 		loadSecretInformation();
-		String email = prop.getProperty("correct_nivid_email");
+		String email = prop.getProperty("admin_email");
 		return email;
 	}
 	
@@ -62,7 +62,7 @@ public class LoginPage {
 	public String incorrectGetEmail() {
 		
 		loadSecretInformation();
-		String email = prop.getProperty("incorrect_nivid_email");
+		String email = prop.getProperty("incorrect_admin_email");
 		return email;
 	}
 	
@@ -75,7 +75,7 @@ public class LoginPage {
 	public String correctGetPassword() {
 		
 		loadSecretInformation();
-		String password = prop.getProperty("correct_nivid_password");
+		String password = prop.getProperty("admin_password");
 		return password;
 	}
 	
@@ -88,7 +88,7 @@ public class LoginPage {
 	public String incorrectGetPassword() {
 		
 		loadSecretInformation();
-		String password = prop.getProperty("incorrect_nivid_password");
+		String password = prop.getProperty("incorrect_admin_password");
 		return password;
 	}
 	
@@ -104,7 +104,7 @@ public class LoginPage {
 	
 	}
 	
-	public void verifyNividLogin() throws InterruptedException {
+	public void verifyLogin() throws InterruptedException {
 		correctSetEmail();
 		correctSetPassword();
 		Thread.sleep(500);

@@ -10,57 +10,65 @@ import com.project.zetalabs.pages.LoginPage;
 
 public class LoginTest extends BaseClass{
 	
-	@Test
+	@Test(priority = 1)
 	public void verifyCorrectCredentials() throws InterruptedException {
 		
-		LoginPage nividLogin = new LoginPage(driver);
-		nividLogin.correctSetEmail();
-		nividLogin.correctSetPassword();
+		LoginPage Login = new LoginPage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Thread.sleep(5000);
+		Login.correctSetEmail();
+		Login.correctSetPassword();
 		Thread.sleep(500);
-		nividLogin.submitButton();
+		Login.submitButton();
 		Reporter.log("TestCase for Correct Both Credentials", true);
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void verifyBlankCredentials() throws InterruptedException {
 		
-		LoginPage nividLogin = new LoginPage(driver);
-		Thread.sleep(500);
+		LoginPage Login = new LoginPage(driver);
+		Thread.sleep(5000);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		nividLogin.submitButton();
+		Login.submitButton();
 		Reporter.log("TestCase for Both Blank Credentials", true);
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void verifyIncorrectEmail() throws InterruptedException {
 		
-		LoginPage nividLogin = new LoginPage(driver);
-		nividLogin.incorrectSetEmail();
-		nividLogin.correctSetPassword();
+		LoginPage Login = new LoginPage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Thread.sleep(5000);
+		Login.incorrectSetEmail();
+		Login.correctSetPassword();
 		Thread.sleep(500);
-		nividLogin.submitButton();
+		Login.submitButton();
 		Reporter.log("TestCase for Incorrect Email and Correct Password", true);
 	}
 	
-	@Test
+	@Test(priority = 4)
 	public void verifyIncorrectPassword() throws InterruptedException {
 		
-		LoginPage nividLogin = new LoginPage(driver);
-		nividLogin.correctSetEmail();
-		nividLogin.incorrectSetPassword();
+		LoginPage Login = new LoginPage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Thread.sleep(5000);
+		Login.correctSetEmail();
+		Login.incorrectSetPassword();
 		Thread.sleep(500);
-		nividLogin.submitButton();
+		Login.submitButton();
 		Reporter.log("TestCase for Correct Email and Incorrect Password", true);
 	}
 	
-	@Test
+	@Test(priority = 5)
 	public void verifyIncorrectCredentials() throws InterruptedException {
 		
-		LoginPage nividLogin = new LoginPage(driver);
-		nividLogin.incorrectSetEmail();
-		nividLogin.incorrectSetPassword();
+		LoginPage Login = new LoginPage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		Thread.sleep(5000);
+		Login.incorrectSetEmail();
+		Login.incorrectSetPassword();
 		Thread.sleep(500);
-		nividLogin.submitButton();
+		Login.submitButton();
 		Reporter.log("TestCase for Both Incorrect Credentials", true);
 	}
 
