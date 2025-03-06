@@ -9,10 +9,47 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">25,219</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">100,401</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.project.zetalabs.tests.GoToDashboardTest</td><td><a href="#m0">verifyCorrectCredentials</a></td><td rowspan="1">1738126058935</td><td rowspan="1">17705</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.project.zetalabs.tests.OrganizationCreateTest</td><td><a href="#m0">verifyInvalidPhoneNumberInOrganizationCreate</a></td><td rowspan="1">1741248780646</td><td rowspan="1">30841</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.project.zetalabs.tests.OrganizationCreateTest</td><td><a href="#m1">verifyBlankOrganizationCreation</a></td><td rowspan="1">1741248746238</td><td rowspan="1">1735</td></tr><tr class="passedeven"><td><a href="#m2">verifyInvalidEmailInOrganizationCreation</a></td><td rowspan="1">1741248759213</td><td rowspan="1">10213</td></tr><tr class="passedeven"><td><a href="#m3">verifyValidOrganizationCreation</a></td><td rowspan="1">1741248723723</td><td rowspan="1">10713</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.project.zetalabs.tests.GoToDashboardTest#verifyCorrectCredentials</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">TestCase for Correct Both Credentials</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.project.zetalabs.tests.OrganizationCreateTest#verifyInvalidPhoneNumberInOrganizationCreate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Test Failed: Validation Message was not Displayed - Expected condition failed: waiting for visibility of element located by By.xpath: //p[.=&apos;Invalid email address&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\OFFICE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62743}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62743/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30320d044dc6d1339a649535a9b4cba4
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.project.zetalabs.tests.OrganizationCreateTest.verifyInvalidPhoneNumberInOrganizationCreate(OrganizationCreateTest.java:138)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.project.zetalabs.tests.OrganizationCreateTest#verifyBlankOrganizationCreation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Passed: Validation Message was Displayed below all the form Fields</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.project.zetalabs.tests.OrganizationCreateTest#verifyInvalidEmailInOrganizationCreation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Passed: Validation Message was Displayed mentioning Email format Was invalid</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.project.zetalabs.tests.OrganizationCreateTest#verifyValidOrganizationCreation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Test Passed: Redirected to http://192.168.1.72:3000/</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

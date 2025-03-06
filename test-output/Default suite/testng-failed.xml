@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.zetalabs.tests.LoginTest">
+      <class name="com.project.zetalabs.tests.OrganizationCreateTest">
         <methods>
-          <include name="verifyIncorrectPassword"/>
-          <include name="verifyIncorrectCredentials"/>
-          <include name="verifyIncorrectEmail"/>
+          <include name="verifyInvalidPhoneNumberInOrganizationCreate"/>
           <include name="closeBrowserSession"/>
-          <include name="verifyCorrectCredentials"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.project.zetalabs.tests.LoginTest -->
+      </class> <!-- com.project.zetalabs.tests.OrganizationCreateTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
