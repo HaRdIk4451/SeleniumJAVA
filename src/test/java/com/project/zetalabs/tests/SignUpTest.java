@@ -24,7 +24,6 @@ public class SignUpTest extends BaseClass {
 		SignUp.signUpHlink();
 		Thread.sleep(1000);
 		Reporter.log("Test Passed: Redirecting to Sign Up was Succeed", true);
-		Reporter.log("Test Failed: Redirecting to Sign Up was not Succeed", false);
 	}
 	
 	@Test(priority = 2)
@@ -118,7 +117,7 @@ public class SignUpTest extends BaseClass {
 		Thread.sleep(5000);
 		WebElement element = driver.findElement(By.xpath("//p[@class='text-[0.8rem] font-medium text-destructive']"));
 		if (element.isDisplayed()) {
-			
+			Reporter.log("Test Passed: Validation Message was Displayed", true);
 			Assert.assertTrue(true, "Test Passed: Validation Message was Displayed");
 			} else {
 				

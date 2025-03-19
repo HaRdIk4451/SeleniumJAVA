@@ -16,13 +16,33 @@ import com.project.zetalabs.pages.LoginPage;
 public class LoginTest extends BaseClass{
 
 	@Test(priority = 1)
-	public void verifyVerifiedCorrectCredentials() throws InterruptedException {
+	public void verifyVerifiedCorrectCredentialsWithOrganization() throws InterruptedException {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetVerifiedEmail();
 			Login.SetVerifiedPassword();
+			Login.submitButton();
+			wait.until(ExpectedConditions.urlContains("http://192.168.1.72:3000/"));
+			String currentUrl = driver.getCurrentUrl();
+
+			Assert.assertTrue(currentUrl.contains("http://192.168.1.72:3000/"), 
+					"Test Passed: Redirected to http://192.168.1.72:3000/.");
+			Reporter.log("Test Passed: Verified Login was Redirected to http://192.168.1.72:3000/", true);
+		} catch (Exception e) {
+			Assert.fail("Test Failed: An exception occurred - " + e.getMessage());
+		}
+	}
+	
+	@Test(priority = 2)
+	public void verifyVerifiedCorrectCredentialsWithoutOrganization() throws InterruptedException {
+		try {
+			LoginPage Login = new LoginPage(driver);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+			Thread.sleep(3000);
+			Login.SetVerifiedEmailWithoutOrganization();
+			Login.SetVerifiedPasswordWithoutOrganization();
 			Login.submitButton();
 			wait.until(ExpectedConditions.urlContains("/create-organization"));
 			String currentUrl = driver.getCurrentUrl();
@@ -35,12 +55,12 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 2)
-	public void verifyUnverifiedCorrectcredentials() {
+	@Test(priority = 3)
+	public void verifyUnverifiedCorrectCredentials() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetUnverifiedEmail();
 			Login.SetUnverifiedPassword();
 			Login.submitButton();
@@ -57,13 +77,13 @@ public class LoginTest extends BaseClass{
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void verifyIncorrectPassword() throws InterruptedException {
 
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetIncorrectEmail();
 			Login.SetIncorrectPassword();
 			Login.submitButton();
@@ -81,13 +101,13 @@ public class LoginTest extends BaseClass{
 		}
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void verifyIncorrectEmail() throws InterruptedException {
 
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetVerifiedEmail();
 			Login.SetIncorrectPassword();
 			Login.submitButton();
@@ -104,13 +124,13 @@ public class LoginTest extends BaseClass{
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void verifyIncorrectCredentials() throws InterruptedException {
 
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetIncorrectEmail();
 			Login.SetIncorrectPassword();
 			Login.submitButton();
@@ -127,13 +147,13 @@ public class LoginTest extends BaseClass{
 		}
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void verifyBlankCredentials() throws InterruptedException {
 
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.submitButton();
 			WebElement validationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//p[contains(@class,'text-[0.8rem] font-medium text-destructive')]")
@@ -148,12 +168,12 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void verifyInvalidEmailFormat() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetInvalidEmailFormat();
 			Login.SetVerifiedPassword();
 			Login.submitButton();
@@ -170,12 +190,12 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void verifyInvalidPasswordFormat() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetVerifiedEmail();
 			Login.SetInvalidPasswordFormat();
 			Login.submitButton();
@@ -194,13 +214,14 @@ public class LoginTest extends BaseClass{
 	
 	//Reset Password / Forget Password
 	
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void verifyVerifiedValidResetEmail() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.clickOnForgetPassword();
+			Thread.sleep(3000);
 			Login.SetVerifiedValidResetEmail();
 			Login.clickSubmitBtnOnReset();
 			WebElement validationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -216,15 +237,17 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void verifyUnverifiedValidResetEmail() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.clickOnForgetPassword();
+			Thread.sleep(3000);
 			Login.SetUnverifiedValidResetEmail();
 			Login.clickSubmitBtnOnReset();
+			Thread.sleep(3000);
 			WebElement validationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//li[.='Password reset link sent to your email.']")
 					));
@@ -238,17 +261,17 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 12)
 	public void verifyInvalidResetEmailFormat() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 			Login.clickOnForgetPassword();
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.SetInvalidResetEmail();
 			Login.clickSubmitBtnOnReset();
 			WebElement validationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//p[contains(@class,'text-[0.8rem] font-medium text-destructive')]")
+					By.xpath("//p[.='Invalid email address']")
 					));
 
 			Assert.assertTrue(validationMessage.isDisplayed(), 
@@ -260,16 +283,17 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 13)
 	public void verifyBlankResetPassword() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			Login.clickOnForgetPassword();
+			Thread.sleep(3000);
 			Login.clickSubmitBtnOnReset();
 			WebElement validationMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//p[contains(@class,'text-[0.8rem] font-medium text-destructive')]")
+					By.xpath("//p[.='Email is required']")
 					));
 
 			Assert.assertTrue(validationMessage.isDisplayed(), 
@@ -281,12 +305,12 @@ public class LoginTest extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 14)
 	public void verifyCancelBtnInResetPassword() {
 		try {
 			LoginPage Login = new LoginPage(driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-			Thread.sleep(5000);
+			Thread.sleep(000);
 			Login.clickOnForgetPassword();
 			Login.clickCancelBtnOnReset();
 			wait.until(ExpectedConditions.urlContains("/login"));

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -104,22 +105,27 @@ public class SignUpPage {
     }
     
     public void SetNewPhoneNumber() {
+    	phone.sendKeys(Keys.BACK_SPACE);
         phone.sendKeys(getSecret("signup_new_phone"));
     }
     
     public void SetOldPhoneNumber() {
+    	phone.sendKeys(Keys.BACK_SPACE);
     	phone.sendKeys(getSecret("signup_old_phone"));
     }
     
     public void SetInvalidPhoneNumber() {
+    	phone.sendKeys(Keys.BACK_SPACE);
     	phone.sendKeys(getSecret("signup_invalid_phone"));
     }
     
     public void SetShortPhoneNumber() {
+    	phone.sendKeys(Keys.BACK_SPACE);
     	phone.sendKeys(getSecret("signup_phone_short"));
     }
     
     public void SetLongPhoneNumber() {
+    	phone.sendKeys(Keys.BACK_SPACE);
     	phone.sendKeys(getSecret("signup_phone_long"));
     }
     

@@ -126,14 +126,17 @@ public class OrganizationCreatePage {
 	}
 
 	public void SetOrganizationPhone() {
+		phone.sendKeys(Keys.BACK_SPACE);
 	    phone.sendKeys(getSecret("organization_phone"));
 	}
 
 	public void SetOrganizationInvalidPhone() {
+		phone.sendKeys(Keys.BACK_SPACE);
 	    phone.sendKeys(getSecret("organization_invalid_phone"));
 	}
 
 	public void SetOrganizationPhoneWithSpaces() {
+		phone.sendKeys(Keys.BACK_SPACE);
 	    phone.sendKeys(getSecret("organization_phone_with_spaces"));
 	}
 

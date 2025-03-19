@@ -33,10 +33,10 @@ public class LoginPage {
 	@FindBy(xpath="//input[@name='email']")
 	WebElement resetEmail;
 	
-	@FindBy(xpath="//button[contains(normalize-space(),'Cancel')]")
+	@FindBy(xpath="//button[normalize-space()='Cancel']")
 	WebElement resetCancelBtn;
 	
-	@FindBy(xpath="//button[contains(normalize-space(),'Reset Password')]")
+	@FindBy(xpath="//button[@type='submit']")
 	WebElement resetSubmitBtn;
 
 	public LoginPage(WebDriver driver) {
@@ -93,6 +93,14 @@ public class LoginPage {
 	
 	public void SetInvalidPasswordFormat() {
 		password.sendKeys(getSecret("invalid_password_format"));
+	}
+	
+	public void SetVerifiedEmailWithoutOrganization() {
+		email.sendKeys(getSecret("login_email_without_organization"));
+	}
+	
+	public void SetVerifiedPasswordWithoutOrganization() {
+		password.sendKeys(getSecret("login_password_without_organization"));
 	}
 	
 	public void clickOnForgetPassword() {
