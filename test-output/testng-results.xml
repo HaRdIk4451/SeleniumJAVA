@@ -1,188 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Test Passed: Validation Message was Displayed below all the form Fields]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Validation Message was Displayed mentioning Phone Number format Was invalid]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Non Image File was Not taken]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Validation Message was Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Test Passed: Redirected to http://192.168.1.72:3000/]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-03-19T16:37:21 GMT+05:45" name="Default suite" finished-at="2025-03-19T16:42:27 GMT+05:45" duration-ms="306587">
+  <suite started-at="2025-04-12T18:52:43 NPT" name="Default suite" finished-at="2025-04-12T18:52:52 NPT" duration-ms="9331">
     <groups>
     </groups>
-    <test started-at="2025-03-19T16:37:21 GMT+05:45" name="Default test" finished-at="2025-03-19T16:42:27 GMT+05:45" duration-ms="306587">
-      <class name="com.project.zetalabs.tests.OrganizationCreateTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:37:21 GMT+05:45" name="setup" finished-at="2025-03-19T16:37:51 GMT+05:45" duration-ms="30506" status="PASS">
+    <test started-at="2025-04-12T18:52:43 NPT" name="Default test" finished-at="2025-04-12T18:52:52 NPT" duration-ms="9331">
+      <class name="com.project.test.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.test.tests.LoginTest@5bf0d49]" started-at="2025-04-12T18:52:43 NPT" name="setup" finished-at="2025-04-12T18:52:49 NPT" duration-ms="6535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyBlankOrganizationCreation()[pri:1, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:37:51 GMT+05:45" name="verifyBlankOrganizationCreation" finished-at="2025-03-19T16:37:57 GMT+05:45" duration-ms="5777" status="PASS">
+        <test-method signature="verifyValidLoginWithValidCredentialsAdmin()[pri:1, instance:com.project.test.tests.LoginTest@5bf0d49]" started-at="2025-04-12T18:52:49 NPT" name="verifyValidLoginWithValidCredentialsAdmin" finished-at="2025-04-12T18:52:51 NPT" duration-ms="2308" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Validation Message was Displayed below all the form Fields]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- verifyBlankOrganizationCreation -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:37:57 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:37:57 GMT+05:45" duration-ms="529" status="PASS">
+        </test-method> <!-- verifyValidLoginWithValidCredentialsAdmin -->
+        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.test.tests.LoginTest@5bf0d49]" started-at="2025-04-12T18:52:51 NPT" name="closeBrowserSession" finished-at="2025-04-12T18:52:52 NPT" duration-ms="404" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyBlankOrganizationCreation status=SUCCESS method=OrganizationCreateTest.verifyBlankOrganizationCreation()[pri:1, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Validation Message was Displayed below all the form Fields]]]>
+                <![CDATA[[TestResult name=verifyValidLoginWithValidCredentialsAdmin status=SUCCESS method=LoginTest.verifyValidLoginWithValidCredentialsAdmin()[pri:1, instance:com.project.test.tests.LoginTest@5bf0d49] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:37:57 GMT+05:45" name="setup" finished-at="2025-03-19T16:38:28 GMT+05:45" duration-ms="30803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyInvalidEmailInOrganizationCreation()[pri:2, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:38:28 GMT+05:45" name="verifyInvalidEmailInOrganizationCreation" finished-at="2025-03-19T16:38:43 GMT+05:45" duration-ms="14525" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidEmailInOrganizationCreation -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:38:43 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:38:43 GMT+05:45" duration-ms="548" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidEmailInOrganizationCreation status=SUCCESS method=OrganizationCreateTest.verifyInvalidEmailInOrganizationCreation()[pri:2, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:38:43 GMT+05:45" name="setup" finished-at="2025-03-19T16:39:13 GMT+05:45" duration-ms="29649" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyInvalidPhoneNumberInOrganizationCreate()[pri:3, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:39:13 GMT+05:45" name="verifyInvalidPhoneNumberInOrganizationCreate" finished-at="2025-03-19T16:39:27 GMT+05:45" duration-ms="14437" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Validation Message was Displayed mentioning Phone Number format Was invalid]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidPhoneNumberInOrganizationCreate -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:39:27 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:39:28 GMT+05:45" duration-ms="544" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidPhoneNumberInOrganizationCreate status=SUCCESS method=OrganizationCreateTest.verifyInvalidPhoneNumberInOrganizationCreate()[pri:3, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Validation Message was Displayed mentioning Phone Number format Was invalid]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:39:28 GMT+05:45" name="setup" finished-at="2025-03-19T16:39:58 GMT+05:45" duration-ms="30087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyInvalidWebsiteInOrganization()[pri:4, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:39:58 GMT+05:45" name="verifyInvalidWebsiteInOrganization" finished-at="2025-03-19T16:40:12 GMT+05:45" duration-ms="14102" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidWebsiteInOrganization -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:40:12 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:40:13 GMT+05:45" duration-ms="525" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidWebsiteInOrganization status=SUCCESS method=OrganizationCreateTest.verifyInvalidWebsiteInOrganization()[pri:4, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Validation Message was Displayed mentioning Email format Was invalid]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:40:13 GMT+05:45" name="setup" finished-at="2025-03-19T16:40:43 GMT+05:45" duration-ms="30620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyUploadNonImageFile()[pri:5, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:40:43 GMT+05:45" name="verifyUploadNonImageFile" finished-at="2025-03-19T16:40:58 GMT+05:45" duration-ms="14292" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Non Image File was Not taken]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyUploadNonImageFile -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:40:58 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:40:58 GMT+05:45" duration-ms="529" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUploadNonImageFile status=SUCCESS method=OrganizationCreateTest.verifyUploadNonImageFile()[pri:5, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Non Image File was Not taken]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:40:58 GMT+05:45" name="setup" finished-at="2025-03-19T16:41:27 GMT+05:45" duration-ms="29227" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyInvalidPostalCodeinOrganizationCreate()[pri:6, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:41:27 GMT+05:45" name="verifyInvalidPostalCodeinOrganizationCreate" finished-at="2025-03-19T16:41:42 GMT+05:45" duration-ms="14539" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Validation Message was Displayed]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidPostalCodeinOrganizationCreate -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:41:42 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:41:42 GMT+05:45" duration-ms="552" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidPostalCodeinOrganizationCreate status=SUCCESS method=OrganizationCreateTest.verifyInvalidPostalCodeinOrganizationCreate()[pri:6, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Validation Message was Displayed]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:41:42 GMT+05:45" name="setup" finished-at="2025-03-19T16:42:12 GMT+05:45" duration-ms="29355" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyValidOrganizationCreation()[pri:7, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:42:12 GMT+05:45" name="verifyValidOrganizationCreation" finished-at="2025-03-19T16:42:27 GMT+05:45" duration-ms="14839" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Test Passed: Redirected to http://192.168.1.72:3000/]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyValidOrganizationCreation -->
-        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50]" started-at="2025-03-19T16:42:27 GMT+05:45" name="closeBrowserSession" finished-at="2025-03-19T16:42:27 GMT+05:45" duration-ms="536" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyValidOrganizationCreation status=SUCCESS method=OrganizationCreateTest.verifyValidOrganizationCreation()[pri:7, instance:com.project.zetalabs.tests.OrganizationCreateTest@6069db50] output=Test Passed: Redirected to http://192.168.1.72:3000/]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowserSession -->
-      </class> <!-- com.project.zetalabs.tests.OrganizationCreateTest -->
+      </class> <!-- com.project.test.tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-package com.project.zetalabs.base;
+package com.project.test.base;
 
 import java.time.Duration;
 
@@ -11,7 +11,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.project.zetalabs.utilities.Utilities;
+import com.project.test.utilities.Utilities;
 
 public class BaseClass {
 	

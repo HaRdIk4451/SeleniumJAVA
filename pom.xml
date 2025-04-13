@@ -29,6 +29,13 @@
 </dependency>
 
 
-   </dependencies>
+     	<dependency>
+     		<groupId>com.project.bachthree.automation.qa</groupId>
+     		<artifactId>
+     			com.project.bachthree.automation.qa
+     		</artifactId>
+     		<version>0.0.1-SNAPSHOT</version>
+     	</dependency>
+     </dependencies>
   
 </project>
