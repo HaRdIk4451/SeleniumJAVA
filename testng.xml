@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Exercise Test Suite">
+    <test name="Registration Tests">
+        <classes>
+            <class name="com.project.automationexercise.tests.RegisterTest"/>
+        </classes>
+    </test>
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="com.project.automationexercise.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <test name="Product Tests">
+        <classes>
+            <class name="com.project.automationexercise.tests.ProductTest"/>
+        </classes>
+    </test>
+    
+    <test name="Cart Tests">
+        <classes>
+            <class name="com.project.automationexercise.tests.CartTest"/>
+        </classes>
+    </test>
+    
+    <test name="Checkout Tests">
+        <classes>
+            <class name="com.project.automationexercise.tests.CheckoutTest"/>
+        </classes>
+    </test>
+</suite> 
