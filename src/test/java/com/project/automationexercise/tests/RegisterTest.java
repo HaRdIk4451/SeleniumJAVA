@@ -2,8 +2,6 @@ package com.project.automationexercise.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import com.github.javafaker.Company;
 import com.project.automationexercise.base.BaseClass;
 import com.project.automationexercise.pages.RegisterPage;
 import com.project.automationexercise.utilities.Utilities;

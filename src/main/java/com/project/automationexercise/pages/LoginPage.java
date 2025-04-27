@@ -31,7 +31,7 @@ public class LoginPage {
     private WebElement loginError;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        this.setDriver(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
@@ -65,4 +65,12 @@ public class LoginPage {
             return false;
         }
     }
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
 } 

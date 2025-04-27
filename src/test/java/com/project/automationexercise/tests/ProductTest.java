@@ -3,14 +3,21 @@ package com.project.automationexercise.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.project.automationexercise.base.BaseClass;
+import com.project.automationexercise.pages.LoginPage;
 import com.project.automationexercise.pages.ProductPage;
+import com.project.automationexercise.utilities.Utilities;
 
 public class ProductTest extends BaseClass {
 
     @Test(priority = 1, description = "Test product filtering by category")
     public void testProductFiltering() {
         ProductPage productPage = new ProductPage(driver);
-        
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.navigateToLogin();
+        loginPage.login(
+                Utilities.getStoredData("generated.email"),
+                Utilities.getStoredData("generated.password")
+            );
         // Navigate to products page
         productPage.navigateToProducts();
         
@@ -25,7 +32,12 @@ public class ProductTest extends BaseClass {
     @Test(priority = 2, description = "Test product details verification")
     public void testProductDetails() {
         ProductPage productPage = new ProductPage(driver);
-        
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.navigateToLogin();
+        loginPage.login(
+                Utilities.getStoredData("generated.email"),
+                Utilities.getStoredData("generated.password")
+            );
         // Navigate to products page
         productPage.navigateToProducts();
         
@@ -45,6 +57,12 @@ public class ProductTest extends BaseClass {
     @Test(priority = 3, description = "Test adding products to cart")
     public void testAddToCart() {
         ProductPage productPage = new ProductPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.navigateToLogin();
+        loginPage.login(
+                Utilities.getStoredData("generated.email"),
+                Utilities.getStoredData("generated.password")
+            );
         
         // Navigate to products page
         productPage.navigateToProducts();

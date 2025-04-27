@@ -14,63 +14,63 @@ public class ProductPage {
     private WebDriverWait wait;
 
     @FindBy(xpath = "//a[contains(@href, '/products')]")
-    private WebElement productsLink;
+    private WebElement productsButton;
 
-    @FindBy(xpath = "(//div[@class='productinfo text-center'])[1]")
-    private List<WebElement> productItems;
+    @FindBy(xpath = "(//div[@class='choose'])[1]")
+    private List<WebElement> items;
 
-    @FindBy(xpath = "(//p[contains(text(),'Sleeveless Dress')])[1]")
-    private List<WebElement> productNames;
+    @FindBy(xpath = "(//div[@class='productinfo text-center'])[1]/p")
+    private List<WebElement> names;
 
-    @FindBy(xpath = "(//h2[contains(text(),'Rs. 1000')])[1]")
-    private List<WebElement> productPrices;
+    @FindBy(xpath = "(//div[@class='productinfo text-center'])[1]/h2")
+    private List<WebElement> prices;
 
     @FindBy(xpath = "//a[@href='#Women']")
-    private WebElement womenCategoryLink;
+    private WebElement womenCategoryButton;
 
     @FindBy(xpath = "//a[contains(@href,'/category_products/1')]")
-    private WebElement womenDressSubcategoryLink;
+    private WebElement womenDressSubcategoryButton;
 
     @FindBy(xpath = "//a[@data-product-id=3]")
     private List<WebElement> addToCartButtons;
 
     public ProductPage(WebDriver driver) {
-        this.driver = driver;
+        this.setDriver(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
 
     public void navigateToProducts() {
-        wait.until(ExpectedConditions.elementToBeClickable(productsLink)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(productsButton)).click();
     }
 
     public void filterByWomenDress() {
-        wait.until(ExpectedConditions.elementToBeClickable(womenCategoryLink)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(womenDressSubcategoryLink)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(womenCategoryButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(womenDressSubcategoryButton)).click();
     }
 
     public boolean verifyFilteredProducts(String expectedKeyword) {
-        wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
-        return productNames.stream()
+        wait.until(ExpectedConditions.visibilityOfAllElements(names));
+        return names.stream()
                 .anyMatch(element -> element.getText().toLowerCase().contains(expectedKeyword.toLowerCase()));
     }
 
     public void clickProduct(int index) {
-        if (index >= 0 && index < productItems.size()) {
-            wait.until(ExpectedConditions.elementToBeClickable(productItems.get(index))).click();
+        if (index >= 0 && index < items.size()) {
+            wait.until(ExpectedConditions.elementToBeClickable(items.get(index))).click();
         }
     }
 
     public String getProductName(int index) {
-        if (index >= 0 && index < productNames.size()) {
-            return productNames.get(index).getText();
+        if (index >= 0 && index < names.size()) {
+            return names.get(index).getText();
         }
         return null;
     }
 
     public String getProductPrice(int index) {
-        if (index >= 0 && index < productPrices.size()) {
-            return productPrices.get(index).getText();
+        if (index >= 0 && index < prices.size()) {
+            return prices.get(index).getText();
         }
         return null;
     }
@@ -80,4 +80,12 @@ public class ProductPage {
             wait.until(ExpectedConditions.elementToBeClickable(addToCartButtons.get(index))).click();
         }
     }
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
 } 

@@ -1,11 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-26T22:34:12 NPT" name="Default suite" finished-at="2025-04-26T22:34:12 NPT" duration-ms="12">
+  <suite started-at="2025-04-27T14:46:57 GMT+05:45" name="Default suite" finished-at="2025-04-27T14:48:02 GMT+05:45" duration-ms="65031">
     <groups>
     </groups>
-    <test started-at="2025-04-26T22:34:12 NPT" name="Default test" finished-at="2025-04-26T22:34:12 NPT" duration-ms="12">
+    <test started-at="2025-04-27T14:46:57 GMT+05:45" name="Default test" finished-at="2025-04-27T14:48:02 GMT+05:45" duration-ms="65031">
+      <class name="com.project.automationexercise.tests.RegisterTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:46:57 GMT+05:45" name="setup" finished-at="2025-04-27T14:47:05 GMT+05:45" duration-ms="8128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCompleteRegistrationWithDataStorage()[pri:1, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:05 GMT+05:45" name="testCompleteRegistrationWithDataStorage" description="Complete new user registration with data storage" finished-at="2025-04-27T14:47:35 GMT+05:45" duration-ms="29783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCompleteRegistrationWithDataStorage -->
+        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:35 GMT+05:45" name="closeBrowserSession" finished-at="2025-04-27T14:47:35 GMT+05:45" duration-ms="502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCompleteRegistrationWithDataStorage status=SUCCESS method=RegisterTest.testCompleteRegistrationWithDataStorage()[pri:1, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:35 GMT+05:45" name="setup" finished-at="2025-04-27T14:47:41 GMT+05:45" duration-ms="5676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyStoredRegistrationData()[pri:2, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:41 GMT+05:45" name="verifyStoredRegistrationData" description="Verify stored registration data" finished-at="2025-04-27T14:47:41 GMT+05:45" depends-on-methods="com.project.automationexercise.tests.RegisterTest.testCompleteRegistrationWithDataStorage" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStoredRegistrationData -->
+        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:41 GMT+05:45" name="closeBrowserSession" finished-at="2025-04-27T14:47:41 GMT+05:45" duration-ms="355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyStoredRegistrationData status=SUCCESS method=RegisterTest.verifyStoredRegistrationData()[pri:2, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:41 GMT+05:45" name="setup" finished-at="2025-04-27T14:47:47 GMT+05:45" duration-ms="5536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testDuplicateRegistrationWithStoredEmail()[pri:3, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:47 GMT+05:45" name="testDuplicateRegistrationWithStoredEmail" description="Test duplicate registration with stored email" finished-at="2025-04-27T14:47:49 GMT+05:45" depends-on-methods="com.project.automationexercise.tests.RegisterTest.testCompleteRegistrationWithDataStorage" duration-ms="2594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDuplicateRegistrationWithStoredEmail -->
+        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:49 GMT+05:45" name="closeBrowserSession" finished-at="2025-04-27T14:47:50 GMT+05:45" duration-ms="370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDuplicateRegistrationWithStoredEmail status=SUCCESS method=RegisterTest.testDuplicateRegistrationWithStoredEmail()[pri:3, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:50 GMT+05:45" name="setup" finished-at="2025-04-27T14:47:55 GMT+05:45" duration-ms="5295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testMinimalRegistration()[pri:4, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:47:55 GMT+05:45" name="testMinimalRegistration" description="Test registration with minimum required fields" finished-at="2025-04-27T14:48:01 GMT+05:45" duration-ms="6282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMinimalRegistration -->
+        <test-method is-config="true" signature="closeBrowserSession(org.testng.ITestResult)[pri:0, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e]" started-at="2025-04-27T14:48:01 GMT+05:45" name="closeBrowserSession" finished-at="2025-04-27T14:48:02 GMT+05:45" duration-ms="397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMinimalRegistration status=SUCCESS method=RegisterTest.testMinimalRegistration()[pri:4, instance:com.project.automationexercise.tests.RegisterTest@3d285d7e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- com.project.automationexercise.tests.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

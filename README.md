@@ -1,6 +1,6 @@
 # Automation Exercise Test Project
 
-This project automates the testing of the Automation Exercise website (https://automationexercise.com) using Selenium WebDriver and TestNG.
+This project automates the testing of the Automation Exercise website (https://automationexercise.com) using Selenium WebDriver and TestNG. The project follows best practices in test automation and implements a robust Page Object Model design pattern.
 
 ## Project Structure
 
@@ -36,78 +36,131 @@ src/
 
 ## Features
 
-- Page Object Model (POM) implementation
-- Reusable custom commands
-- Screenshot comparison
-- API response handling
-- Data-driven testing
-- Negative test scenarios
-- Session management
-- Error handling
+- **Page Object Model (POM) Implementation**
+  - Clean separation of page elements and actions
+  - Reusable page components
+  - Maintainable and scalable test structure
+
+- **Test Automation Features**
+  - Screenshot capture on test failure
+  - Custom wait conditions
+  - Dynamic element handling
+  - Robust error handling
+  - Session management
+  - Data-driven testing capabilities
+
+- **Configuration Management**
+  - Externalized configuration
+  - Environment-specific settings
+  - Secure credential management
 
 ## Test Scenarios
 
-1. User Registration & Session Handling
-   - Register new user with random details
-   - Verify email uniqueness
-   - Verify login after registration
-   - Store and reuse session data
+### 1. User Registration & Session Handling
+- Register new user with random details
+- Verify email uniqueness
+- Verify login after registration
+- Store and reuse session data
+- Handle registration edge cases
 
-2. Product Browsing & Filtering
-   - Navigate to Products page
-   - Filter by Category (Women > Dress)
-   - Verify filtered products
-   - Verify product details
+### 2. Product Browsing & Filtering
+- Navigate to Products page
+- Filter by Category (Women > Dress)
+- Verify filtered products
+- Verify product details
+- Test product search functionality
+- Validate product sorting options
 
-3. Cart Management
-   - Add multiple items
-   - Modify quantities
-   - Remove items
-   - Verify cart totals
+### 3. Cart Management
+- Add multiple items to cart
+- Modify quantities
+- Remove items
+- Verify cart totals
+- Test cart persistence
+- Validate cart updates
 
-4. Checkout Process
-   - Proceed to checkout
-   - Enter shipping details
-   - Enter payment information
-   - Verify order confirmation
+### 4. Checkout Process
+- Proceed to checkout
+- Enter shipping details
+- Enter payment information
+- Verify order confirmation
+- Test order history
+- Validate order details
 
-5. Login/Logout
-   - Login with valid credentials
-   - Login with invalid credentials
-   - Logout
-   - Re-login with same credentials
+### 5. Login/Logout
+- Login with valid credentials
+- Login with invalid credentials
+- Logout functionality
+- Re-login with same credentials
+- Session timeout handling
+- Password recovery testing
 
-## Setup
+## Setup Instructions
 
-1. Clone the repository
-2. Install Java 11 or higher
-3. Install Maven
-4. Install required browsers (Chrome, Firefox, Edge)
-5. Update `config.properties` with your preferences
+1. **Prerequisites**
+   - Java 11 or higher
+   - Maven 3.6.0 or higher
+   - Chrome/Firefox/Edge browser
+   - Git
+
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone [repository-url]
+   
+   # Navigate to project directory
+   cd automation-exercise-test
+   
+   # Install dependencies
+   mvn clean install
+   ```
+
+3. **Configuration**
+   - Update `config.properties` with your preferences:
+     - Browser selection
+     - Base URL
+     - Timeout settings
+   - Update `secrets.properties` with test credentials
 
 ## Running Tests
 
 ```bash
+# Run all tests
 mvn clean test
+
+# Run specific test suite
+mvn test -Dtest=LoginTest
+
+# Run with specific browser
+mvn test -Dbrowser=chrome
 ```
-
-## Configuration
-
-- Browser selection: `config.properties`
-- Base URL: `config.properties`
-- Test data: `secrets.properties`
 
 ## Dependencies
 
 - Selenium WebDriver
 - TestNG
-- JavaFaker
-- JSON
+- WebDriverManager
+- Apache Commons
+- Log4j
 
-## Reports
+## Best Practices Implemented
 
-Test reports are generated in the `test-output` directory.
+- Page Object Model design pattern
+- Reusable utility methods
+- Custom assertions
+- Screenshot capture on failure
+- Detailed logging
+- Clean test data management
+- Robust error handling
 
-## Screenshots
+## Contributing
 
-Screenshots are stored in `test-output/screenshots/` for visual comparison. 
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 

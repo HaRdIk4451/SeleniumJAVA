@@ -36,7 +36,7 @@ public class CartPage {
     private WebElement cartTotal;
 
     public CartPage(WebDriver driver) {
-        this.driver = driver;
+        this.setDriver(driver);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
@@ -86,4 +86,12 @@ public class CartPage {
     public boolean verifyCartEmpty() {
         return cartItems.isEmpty();
     }
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
 } 

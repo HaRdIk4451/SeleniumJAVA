@@ -94,7 +94,7 @@ public class RegisterPage {
 	private WebElement emailExistsError;
 
 	public RegisterPage(WebDriver driver) {
-		this.driver = driver;
+		this.setDriver(driver);
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		this.faker = new Faker();
 		PageFactory.initElements(driver, this);
@@ -279,5 +279,13 @@ public class RegisterPage {
 				);
 
 		submitRegistration();
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
 	}
 }
