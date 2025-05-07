@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.test.automationqa.NividLiveTest">
+      <class name="com.project.automationqa.tests.CheckoutTest">
         <methods>
+          <include name="testProceedToCheckout"/>
+          <include name="testPaymentDetailsEntryAndOrderConfirmation"/>
+          <include name="closeBrowserSession"/>
+          <include name="testCheckoutPageNavigation"/>
           <include name="setup"/>
-          <include name="verifyRegisterTest"/>
         </methods>
-      </class> <!-- com.project.test.automationqa.NividLiveTest -->
+      </class> <!-- com.project.automationqa.tests.CheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
